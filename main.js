@@ -16,11 +16,13 @@ const toggleDisabled = function (element) {
 };
 
 const getRandomColor = function () {
-    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+    return `#${((Math.random() * 0xffffff) << 0)
+        .toString(16)
+        .padStart(6, '0')}`;
 };
 
 const setColorTo = function (box, color) {
-    box.style.backgroundColor = color;
+    box.style.background = color;
 };
 
 const reloadWindow = function () {
@@ -49,16 +51,10 @@ activateDisabled(submitBtn);
 setColorTo(correctColorBox, correctColor);
 
 colorBoxes.forEach((box) => {
-    if (box !== colorBoxToGuess) {
-        setColorTo(box, getRandomColor());
-    }
+    setColorTo(box, getRandomColor());
 });
 
 setColorTo(colorBoxToGuess, correctColor);
-console.log(
-    colorBoxToGuess.style.backgroundColor ===
-        correctColorBox.style.backgroundColor
-);
 
 colorBoxes.forEach((box) => {
     box.addEventListener('click', (event) => {
