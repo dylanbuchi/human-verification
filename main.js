@@ -39,6 +39,7 @@ const checkbox = document.getElementById('checkbox');
 const correctColorBox = document.querySelector('.correct-color-box');
 const colorBoxes = document.querySelectorAll('.color-box');
 const colorBoxesContainer = document.querySelector('main');
+const h1Element = document.querySelector('h1');
 
 // Main
 const correctColor = getRandomColor();
@@ -63,6 +64,7 @@ colorBoxes.forEach((box) => {
             toggleDisabled(checkbox);
             toggleDisabled(submitBtn);
             hideElement(colorBoxesContainer);
+            hideElement(h1Element);
         } else {
             alert('Please verify that you are human');
             reloadWindow();
