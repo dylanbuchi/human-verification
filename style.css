@@ -3,6 +3,10 @@
     --black: #000;
 }
 
+label {
+    font-size: 20px;
+}
+
 body {
     margin-top: 50px;
     display: flex;
@@ -20,6 +24,7 @@ h1 {
 /* submit button */
 .btn {
     margin-left: 10px;
+    font-size: 20px;
 }
 
 .correct-color-box {
@@ -31,29 +36,30 @@ h1 {
     width: 100px;
     height: 100px;
     border: 2px solid;
+    box-shadow: 0 0 1px 2px var(--black);
 }
 
 .color-box {
     width: 100px;
     height: 100px;
-    border: 1px solid;
+    border: 2px solid;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
     background-color: white;
+    box-shadow: 0 0 1px 2px var(--black);
 }
 
 .color-boxes-container {
     display: grid;
     margin-bottom: 50px;
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0px;
-    box-shadow: 0 0 10px 2px var(--black);
+    gap: 10px;
     border-radius: 10px;
-    background-color: var(--black);
+    background-color: white;
 }
 
 .form-box {
