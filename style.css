@@ -7,6 +7,10 @@ label {
     font-size: 20px;
 }
 
+#checkbox {
+    cursor: pointer;
+}
+
 body {
     margin-top: 50px;
     display: flex;
@@ -23,6 +27,7 @@ h1 {
 
 /* submit button */
 .btn {
+    cursor: pointer;
     margin-left: 10px;
     font-size: 20px;
 }
@@ -40,6 +45,7 @@ h1 {
 }
 
 .color-box {
+    cursor: pointer;
     width: 100px;
     height: 100px;
     border: 2px solid;
